@@ -1,0 +1,15 @@
+# Current users (list containing some used usernames)
+current_users = ['john', 'jaden', 'maria', 'sophie', 'paul']
+
+# New users (some of these usernames are already used)
+new_users = ['JOHN', 'sam', 'Maria', 'emily', 'steven']
+
+# Convert current_users to lowercase to make the check case-insensitive
+current_users_lower = [user.lower() for user in current_users]
+
+# Check if each new username is available
+for new_user in new_users:
+    if new_user.lower() in current_users_lower:
+        print(f"The username '{new_user}' is already taken, please enter a new one.")
+    else:
+        print(f"The username '{new_user}' is available.")
